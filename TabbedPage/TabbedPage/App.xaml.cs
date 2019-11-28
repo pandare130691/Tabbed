@@ -9,7 +9,6 @@ namespace TabbedPage
         public App()
         {
             InitializeComponent();
-            //abc
             MainPage = new MainPage();
         }
 

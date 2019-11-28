@@ -6,11 +6,816 @@
              mc:Ignorable="d"
              x:Class="TabbedPage.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid BackgroundColor="White"
+          RowSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              BackgroundColor="#426ec7"
+              ColumnSpacing="5">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0"
+                 Margin="5">
+                <Label x:Name="lbl0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       Text="Televisions"
+                       TextColor="Yellow"/>
+                <BoxView x:Name="bv0"
+                         HeightRequest="2" 
+                         BackgroundColor="White"
+                         VerticalOptions="End"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TVLst"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+
+            <Grid Grid.Column="1"
+                 Margin="5">
+                <Label x:Name="lbl1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       Text="Monitors"
+                       TextColor="White"/>
+                <BoxView x:Name="bv1"
+                         HeightRequest="2" 
+                         BackgroundColor="White"
+                         VerticalOptions="End"
+                         IsVisible="False"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="MTLst"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+
+            <Grid Grid.Column="2"
+                 Margin="5">
+                <Label x:Name="lbl2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       Text="Projectors"
+                       TextColor="White"/>
+                <BoxView x:Name="bv2"
+                         HeightRequest="2" 
+                         BackgroundColor="White"
+                         VerticalOptions="End"
+                         IsVisible="False"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="PJLst"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+
+            <Grid Grid.Column="3"
+                 Margin="5">
+                <Label x:Name="lbl3"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       Text="Players"
+                       TextColor="White"/>
+                <BoxView x:Name="bv3"
+                         HeightRequest="2" 
+                         BackgroundColor="White"
+                         VerticalOptions="End"
+                         IsVisible="False"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="VPLst"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+
+
+        </Grid>
+
+        <Grid x:Name="GrTV"
+              Grid.Row="1"
+              Margin="20">
+
+            <ScrollView Orientation="Vertical"
+                        VerticalOptions="Start"
+                        VerticalScrollBarVisibility="Never">
+
+                <StackLayout Orientation="Vertical"
+                             VerticalOptions="Start"
+                             Spacing="20">
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="TV.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="TV.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="TV.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="TV.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="TV.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="TV.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </Grid>
+
+        <Grid x:Name="GrMP"
+              Grid.Row="1"
+              Margin="20"
+              IsVisible="False">
+
+            <ScrollView Orientation="Vertical"
+                        VerticalOptions="Start"
+                        VerticalScrollBarVisibility="Never">
+
+                <StackLayout Orientation="Vertical"
+                             VerticalOptions="Start"
+                             Spacing="20">
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="monitor.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="monitor.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="monitor.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="monitor.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="monitor.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="monitor.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </Grid>
+
+        <Grid x:Name="GrPJ"
+              Grid.Row="1"
+              Margin="20"
+              IsVisible="False">
+
+            <ScrollView Orientation="Vertical"
+                        VerticalOptions="Start"
+                        VerticalScrollBarVisibility="Never">
+
+                <StackLayout Orientation="Vertical"
+                             VerticalOptions="Start"
+                             Spacing="20">
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="projector.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="projector.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="projector.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </Grid>
+
+        <Grid x:Name="GrPL"
+              Grid.Row="1"
+              Margin="20"
+              IsVisible="False">
+
+            <ScrollView Orientation="Vertical"
+                        VerticalOptions="Start"
+                        VerticalScrollBarVisibility="Never">
+
+                <StackLayout Orientation="Vertical"
+                             VerticalOptions="Start"
+                             Spacing="20">
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="VP.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="VP.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid HeightRequest="300">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+
+                            <Frame HasShadow="False"
+                                   Padding="0"
+                                   BorderColor="#d2d2d2">
+                                <Image Source="VP.png"
+                                       Aspect="Fill"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill"
+                                       Margin="10"/>
+                            </Frame>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+
+                            <Label Text="Infomations"
+                                   FontSize="20"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="DimGray"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </Grid>
+
+        <Grid Grid.Row="2"
+              BackgroundColor="#426ec7"
+              ColumnSpacing="5">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0"
+                 Margin="5">
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="25"
+                       FontAttributes="Bold"
+                       Text="All"
+                       TextColor="Yellow"/>
+            </Grid>
+
+            <Grid Grid.Column="1"
+                 Margin="5">
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="25"
+                       FontAttributes="Bold"
+                       Text="Cart"
+                       TextColor="White"/>
+            </Grid>
+
+            <Grid Grid.Column="2"
+                 Margin="5">
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="25"
+                       FontAttributes="Bold"
+                       Text="Wish List"
+                       TextColor="White"/>
+            </Grid>
+
+
+        </Grid>
+
+    </Grid>
 
 </ContentPage>

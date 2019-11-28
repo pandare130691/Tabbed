@@ -130,4 +130,16 @@
       <Name>TabbedPage</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\projector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\VP.png" />
+  </ItemGroup>
 </Project>
